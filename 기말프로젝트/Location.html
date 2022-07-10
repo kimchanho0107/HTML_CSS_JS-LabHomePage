@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Location.css">
+    
+    <title>Welcome to IM Lab</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <div class="header">
+        <img src="IMlabimage.png" alt="IM LOGO" class="logoimage">
+        <a class="logo" href="impage.html">IM Lab</a>
+
+        <ul class="menu">
+            <li>
+                <a  href="#">Introduction</a>
+                <ul class="depth_1" id="depth_a">
+                    <li><a href="Location.html">Location</a></li>
+                    <li><a href="#">Since</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Member</a>
+                <ul class="depth_1" id="depth_b">
+                    <li><a href="#">Professor</a></li>
+                    <li><a href="#">Represent</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Gallery</a>
+                <ul class="depth_1">
+                    <li><a href="Gallery-Lab.html">Lab</a></li>
+                    <li><a href="#">MT</a></li>
+                    <li><a href="#">Alcohol</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">News</a>
+                <ul class="depth_1">
+                    <li><a href="#">Competition</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">More</a>
+                <ul class="depth_1">
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </li>
+        </ul> 
+        <a class="login" href="loginpage.html"><img src="loginicon3.png" class="loginicon" href="loginpage.html"></a> 
+    </div>
+    <!-- 부제목 -->
+    <div class="subtitle">
+        <div class="titlename">Introduction</div>
+        <div class="subname">Location</div>
+    </div>
+    <!-- 바디 -->
+    <div class="body">
+        <p class="box01">
+            경기도 오산시 한신대길 137
+            <input id="myInput" value="경기도 오산시 한신대길 137" readonly>
+            <button onclick="copy_to_clipboard()"><img src="https://blog.kakaocdn.net/dn/N1wUc/btqIl7XZtKM/b44qX9Six1vczz2ISWj4LK/img.png" alt="복사하기">
+            </button>
+        </p>
+
+        <div class="map">
+        <input type="checkbox" id="biggerbutton">
+        <label for="biggerbutton" class="biggerbutton"><div class="mapbtn">지도보기</div></label>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.2905362076144!2d127.02041001537494!3d37.19332807986954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b4116d0196943%3A0xb56a9d5a27fd63eb!2z7ZWc7Iug64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1653871902687!5m2!1sko!2skr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        
+        
+    </div>
+    <script type="text/javascript" src="Location.js"></script>
+</body>
+</html>

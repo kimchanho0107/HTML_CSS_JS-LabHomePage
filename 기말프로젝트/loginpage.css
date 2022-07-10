@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: swing-in-bottom-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+ 
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+
+    width: 100%;
+    height: 100px;
+    text-decoration: none;
+    color: inherit;
+}
+.top2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-bottom: solid;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: KyoboHandwriting2020A;
+    font-size: 40px;
+
+    margin-top: 20px;
+}
+#id {
+    border: solid;
+    border-radius: 20px;
+    width: 60%;
+    height: 50px;
+    font-size: 40px;
+}
+#pwd {
+    border: solid;
+    border-radius: 20px;
+    width: 60%;
+    height: 50px;
+    font-size: 40px;
+}
+.a{
+    margin-top: 20px;
+}
+.loginbtn{
+    width: 120px;
+    height: 40px;
+    font-family: KyoboHandwriting2020A;
+    font-size: 30px;
+    border: solid;
+    border-radius: 20px;
+}
+.b{
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+  /* 글꼴 */
+  @font-face {
+    font-family: 'KyoboHandwriting2020A';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  /* 화면 등장 방법 */
+  @keyframes swing-in-bottom-fwd {
+    0% {
+      transform: rotateX(100deg);
+      transform-origin: bottom;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      transform-origin: bottom;
+      opacity: 1;
+    }
+  }

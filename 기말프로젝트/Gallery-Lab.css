@@ -1,0 +1,194 @@
+body{
+  display: flex;    
+  flex-direction: column;
+/* 페이지 등장효과 */
+  animation: swing-in-bottom-fwd 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+/* 헤더 */
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+/* 헤더/로고사진 */
+.logoimage{
+  display:flex;
+  width: 5%;
+  height: 80px;
+}
+/* 헤더/랩이름 */
+.logo{
+  display: flex;
+  width: 11%;
+  height: 80px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 4vw;
+  justify-content: center;
+  align-items: center;
+}
+/* 헤더/메뉴바 */
+.menu{
+  display: flex;
+  width: 78%;
+  height: 80px;
+  padding: 0px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  font-size: 2vw;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+.login{
+  width: 6%;
+}
+.loginicon{
+  width: 40px;
+  height: 40px;
+}
+/* 드롭다운 상단 메뉴바 */
+ul{
+  list-style:none;
+  padding: 0px; 
+}
+a{
+  text-decoration:none; 
+  color:inherit;
+}
+.menu:after{
+  display:block; 
+  content:''; 
+  clear:both;
+}
+.menu > li{
+  position:relative; 
+  float:left; 
+}
+.menu > li > a{
+  display:block; 
+  padding:0 15px; 
+  height:40px; 
+  line-height:40px;
+}
+.menu > li:hover .depth_1 {
+  display:block; 
+}
+.menu .depth_1{
+  display:none; 
+  position:absolute;  
+  z-index: 1;
+  background-color: white;
+  opacity: 0.8;
+}
+.menu .depth_1 a{
+  display:block; 
+  padding:1vw; 
+  font-size: 1.5vw; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+  color:black;
+  border-left: solid;
+}
+ul a:hover{
+  text-decoration: underline;
+}
+/* 부제목 */
+.subtitle{
+  display: flex;
+  width: 99.9%;
+  height: 120px;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+}
+/* 큰제목 */
+.titlename{
+  height: 80px;
+  width: 100%;
+  font-size: 70px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin: 0px;
+}
+/* 세부제목 */
+.subname{
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+/* 바디 */
+.body{
+  display: flex;
+  width: 99.7%;
+  height: 100%;
+  
+  margin-top: 3vh;
+  border-left: solid;
+  border-right: solid;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: grid;
+  gap: 5px;
+  /* grid-template-columns: 300px 1fr; */
+  /* 아래는 빈 공간을 알아서 자동으로 채우며,
+   최소 180px은 유지하고, 여백은 공평하게 분배 */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /*하나로 고정하려면 180px만 사용[minmax(180px, 200px);](자동row 생성)*/
+  grid-auto-rows: minmax(180px, 200px);
+  background-color: beige;
+}
+.image > img {
+  object-fit: cover; /*contain*/
+  width: 100%; /*이미지에 직접 주어진 공간을 모두 사용하도록 함*/
+}
+.image {
+  transition: all 0.5s;
+}
+.image:hover {
+  transform: scale(1.08) translateZ(50px);
+}
+
+  
+/* 반응형 웹사이트 */
+@media (max-width:600px){ /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+  }
+  .logoimage{
+    width: 40px;
+    height: 40px;
+  }
+  .logo{
+    font-size: 19px;
+    height: 20px;
+  }
+  .menu{
+    font-size: 15px;
+    height: 20px;
+    margin-top: 10px;
+  }
+  body{
+    overflow: scroll;
+  }
+}
+
+/* 화면 등장 방법 */
+@keyframes swing-in-bottom-fwd {
+  0% {
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+}
